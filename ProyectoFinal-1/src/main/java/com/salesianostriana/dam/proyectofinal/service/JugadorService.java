@@ -16,32 +16,59 @@ public class JugadorService {
 		this.jugadorRepository = repo;
 	}
 	
-	//Añadir jugador
+	/**
+	 * Añade un jugador
+	 * 
+	 * @param j El jugador que se va a añadir
+	 * @return El jugador ya añadido
+	 */
 	public Jugador add(Jugador j) {
 		return jugadorRepository.save(j);
 	}
 	
-	//Editar un jugador, si no existe, añade uno
+	/**
+	 * Edita un jugador, si no existe, añade uno
+	 * 
+	 * @param j El jugador que se va a añadir
+	 * @return El jugador ya añadido
+	 */
 	public Jugador edit(Jugador j) {
 		return jugadorRepository.save(j);
 	}
 	
-	//Eliminar un jugador
+	/**
+	 * Elimina un jugador
+	 * 
+	 * @param j El jugador que se va a eliminar
+	 */
 	public void delete(Jugador j){
 		jugadorRepository.delete(j);
 	}
 
-	//Eliminar un jugador por su id
+	/**
+	 * Elimina un jugador por su id
+	 * 
+	 * @param id El id del jugador a eliminar
+	 */
 	public void deleteById(long id) {
 		jugadorRepository.deleteById(id);
 	}
 	
-	//Devuelve todos los jugadores
+	/**
+	 * Devuelve todos los jugadores
+	 * 
+	 * @return Una lista con todos los jugadores
+	 */
 	public List<Jugador> findAll(){
 		return jugadorRepository.findAll();
 	}
 	
-	//Devuelve un jugador, buscando por su id
+	/**
+	 * Devuelve un jugador, buscando por su id
+	 * 
+	 * @param id El id del jugador a buscar
+	 * @return El jugador encontrado por su id o null en caso de que no se encuentre
+	 */
 	public Jugador findById(long id) {
 		return jugadorRepository.findById(id).orElse(null);
 	}
