@@ -16,7 +16,7 @@ public class MainController {
 		this.jugadorService = service;
 	}
 	
-	@GetMapping("/")
+	@GetMapping({"/", "portada.html"})
 	public String index(Model model) {
 		model.addAttribute("jugador", jugadorService.findAll());
 		return "portada";

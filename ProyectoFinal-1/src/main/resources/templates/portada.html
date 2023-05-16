@@ -11,15 +11,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="./css/estilos.css">
-	<script src="./js/script.js" defer></script>
+	<link rel="stylesheet" href="./css/estilos.css" th:href="@{/css/estilos.css}">
+	<script src="./js/script.js" defer th:src="@{/js/script.js}"></script>
 	<title>Inicio</title>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-		<a href="./portada.html" th:href="@{./portada.html}"><img src="./img/LogoPaintballTerminado.png" alt="LogoPaintball" id="logo" th:href="@{../static/img/LogoPaintballTerminado.png}"></a>
+		<a href="./portada.html" th:href="@{./portada.html}"><img src="./img/LogoPaintballTerminado.png" alt="LogoPaintball" id="logo" th:href="@{/img/LogoPaintballTerminado.png}"></a>
 		<div class="container-fluid">
 			<ul class="navbar-nav">
 				<li class="nav-item">
@@ -29,7 +29,10 @@
 					<a class="nav-link" href="#section2">¿Quiénes somos?</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#section3">Nuestro material</a>
+					<a class="nav-link" href="#section3">¿Dónde estamos?</a>
+				</li>
+        		<li class="nav-item">
+					<a class="nav-link" href="#section4">Nuestro material</a>
 				</li>
 			</ul>
 		</div>
@@ -37,7 +40,7 @@
 
 	<div id="section1" class="container-fluid divVideo">
 		<video autoplay muted loop id="miVideo" onclick="pausePlay(this)">
-			<source src="./video/VideoInicio.mp4" th:href="@{../static/video/VideoInicio.mp4}">
+			<source src="./video/VideoInicio.mp4" th:href="@{/video/VideoInicio.mp4}">
 		</video>
 	</div>
 
@@ -72,12 +75,23 @@
 		</div>
 	</div>
 
-	<div id="section3" class="container-fluid" style="padding:100px 20px;">
+  <div id="section3" class="container-fluid" style="padding:100px 20px;">
+    <div class="mapa">
+      <h1>¿Dónde estamos?</h1>
+      <br>
+      <center>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d898.0858611801092!2d-5.873843515147496!3d37.19939190013823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spaintball%20sevilla!5e1!3m2!1ses!2ses!4v1684227577497!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </center>
+      
+    </div>
+  </div>
+
+	<div id="section4" class="container-fluid" style="padding:100px 20px;">
 		<div class="material">
 			<h1>Nuestro material</h1>
 			<br>
 			<div class="card" style="width:250px">
-				<img class="card-img-top" src="./img/m4ai.jpg" alt="M4A1" th:href="@{./static/img/m4a1.jpg}">
+				<img class="card-img-top" src="./img/m4ai.jpg" alt="M4A1" th:href="@{/img/m4a1.jpg}">
 				<div class="card-body">
 					<hr>
 					<h4 class="card-title">M4A1</h4>
@@ -85,7 +99,7 @@
 			</div>
 
 			<div class="card" style="width:250px">
-				<img class="card-img-top" src="./img/ak47.jpg" alt="AK47" th:href="@{./static/img/ak47.jpg}">
+				<img class="card-img-top" src="./img/ak47.jpg" alt="AK47" th:href="@{/img/ak47.jpg}">
 				<div class="card-body">
 					<hr>
 					<h4 class="card-title">AK47</h4>
@@ -93,7 +107,7 @@
 			</div>
 
 			<div class="card" style="width:250px">
-				<img class="card-img-top" src="./img/g36c.jpg" alt="G36C" th:href="@{./static/img/g36c.jpg}">
+				<img class="card-img-top" src="./img/g36c.jpg" alt="G36C" th:href="@{/img/g36c.jpg}">
 				<div class="card-body">
 					<hr>
 					<h4 class="card-title">G36C</h4>
@@ -101,7 +115,7 @@
 			</div>
 
 			<div class="card" style="width:250px">
-				<img class="card-img-top" src="./img/mp5.jpg" alt="MP5" th:href="@{./static/img/mp5.jpg}">
+				<img class="card-img-top" src="./img/mp5.jpg" alt="MP5" th:href="@{/img/mp5.jpg}">
 				<div class="card-body">
 					<hr>
 					<h4 class="card-title">MP5</h4>
@@ -109,14 +123,14 @@
 			</div>
 
 			<div class="card" style="width:250px">
-				<img class="card-img-top" src="./img/scar.jpg" alt="SCAR-L" th:href="@{./static/img/scar.jpg}">
+				<img class="card-img-top" src="./img/scar.jpg" alt="SCAR-L" th:href="@{/img/scar.jpg}">
 				<div class="card-body">
 					<h4 class="card-title">SCAR-L</h4>
 				</div>
 			</div>
 
 			<div class="card" style="width:250px">
-				<img class="card-img-top" src="./img/ump45.jpg" alt="UMP45" th:href="@{./static/img/ump45.jpg}">
+				<img class="card-img-top" src="./img/ump45.jpg" alt="UMP45" th:href="@{/img/ump45.jpg}">
 				<div class="card-body">
 					<hr>
 					<h4 class="card-title">UMP45</h4>
@@ -124,7 +138,7 @@
 			</div>
 
 			<div class="card" style="width:250px">
-				<img class="card-img-top" src="./img/m14.jpg" alt="M14" th:href="@{./static/img/m14.jpg}">
+				<img class="card-img-top" src="./img/m14.jpg" alt="M14" th:href="@{/img/m14.jpg}">
 				<div class="card-body">
 					<hr>
 					<h4 class="card-title">M14</h4>
@@ -132,7 +146,7 @@
 			</div>
 
 			<div class="card" style="width:250px">
-				<img class="card-img-top" src="./img/p90.jpg" alt="P90" th:href="@{./static/img/p90.jpg}">
+				<img class="card-img-top" src="./img/p90.jpg" alt="P90" th:href="@{/img/p90.jpg}">
 				<div class="card-body">
 					<hr>
 					<h4 class="card-title">P90</h4>
@@ -142,7 +156,7 @@
 			<span id="mas">
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/g3.jpg" alt="G3" th:href="@{./static/img/g3.jpg}">
+					<img class="card-img-top" src="./img/g3.jpg" alt="G3" th:href="@{/img/g3.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">G3</h4>
@@ -150,7 +164,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/famas.jpg" alt="FAMAS" th:href="@{./static/img/famas.jpg}">
+					<img class="card-img-top" src="./img/famas.jpg" alt="FAMAS" th:href="@{/img/famas.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">FAMAS</h4>
@@ -158,7 +172,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/sig552.jpg" alt="SIG 552" th:href="@{./static/img/sig552.jpg}">
+					<img class="card-img-top" src="./img/sig552.jpg" alt="SIG 552" th:href="@{/img/sig552.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">SIG 552</h4>
@@ -166,7 +180,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/m16.jpg" alt="M16" th:href="@{./static/img/m16.jpg}">
+					<img class="card-img-top" src="./img/m16.jpg" alt="M16" th:href="@{/img/m16.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">M16</h4>
@@ -174,7 +188,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/monoVerde.jpg" alt="Mono Verde" th:href="@{./static/img/monoVerde.jpg}">
+					<img class="card-img-top" src="./img/monoVerde.jpg" alt="Mono Verde" th:href="@{/img/monoVerde.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">Mono Verde</h4>
@@ -182,7 +196,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/monoAzul.jpg" alt="Mono Azul" th:href="@{./static/img/monoAzul.jpg}">
+					<img class="card-img-top" src="./img/monoAzul.jpg" alt="Mono Azul" th:href="@{/img/monoAzul.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">Mono Azul</h4>
@@ -190,7 +204,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/cascoVerde.jpg" alt="Casco Verde" th:href="@{./static/img/cascoVerde.jpg}">
+					<img class="card-img-top" src="./img/cascoVerde.jpg" alt="Casco Verde" th:href="@{/img/cascoVerde.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">Casco Verde</h4>
@@ -198,7 +212,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/cascoNegro.jpg" alt="Casco Negro" th:href="@{./static/img/cascoNegro.jpg}">
+					<img class="card-img-top" src="./img/cascoNegro.jpg" alt="Casco Negro" th:href="@{/img/cascoNegro.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">Casco Negro</h4>
@@ -206,7 +220,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/tuboBolas.jpg" alt="Tubo Bolas" th:href="@{./static/img/tuboBolas.jpg}">
+					<img class="card-img-top" src="./img/tuboBolas.jpg" alt="Tubo Bolas" th:href="@{/img/tuboBolas.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">Tubo con Bolas</h4>
@@ -214,7 +228,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/cajaBolasProfesionales.jpg" alt="Bolas Profesionales" th:href="@{./static/img/cajaBolasProfesionales.jpg}">
+					<img class="card-img-top" src="./img/cajaBolasProfesionales.jpg" alt="Bolas Profesionales" th:href="@{/img/cajaBolasProfesionales.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">Caja de Bolas Profesionales</h4>
@@ -222,7 +236,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/cargadorAmpliado.jpg" alt="Cargador Ampliado" th:href="@{./static/img/cargadorAmpliado.jpg}">
+					<img class="card-img-top" src="./img/cargadorAmpliado.jpg" alt="Cargador Ampliado" th:href="@{/img/cargadorAmpliado.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">Cargador Ampliado</h4>
@@ -230,7 +244,7 @@
 				</div>
 
 				<div class="card" style="width:250px">
-					<img class="card-img-top" src="./img/culata.jpg" alt="Culata" th:href="@{./static/img/culata.jpg}">
+					<img class="card-img-top" src="./img/culata.jpg" alt="Culata" th:href="@{/img/culata.jpg}">
 					<div class="card-body">
 						<hr>
 						<h4 class="card-title">Culata</h4>
@@ -278,7 +292,7 @@
 							<i class="fas fa-gem me-3"></i>Paintball Pium Pium Bang Bang
 						</h6>
 						<a href="./portada.html" th:href="@{./portada.html}">
-							<img src="./img/LogoPaintballTerminado.png" alt="Logo" id="logoFooter"th:href="@{./static/img/LogoPaintballTerminado.jpg}">
+							<img src="./img/LogoPaintballTerminado.png" alt="Logo" id="logoFooter"th:href="@{/img/LogoPaintballTerminado.jpg}">
 						</a>
 					</div>
 
@@ -336,7 +350,7 @@
 
 		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
 			© 2023 Copyright:
-			<a class="text-reset fw-bold" href="./portada.html">paintballpiumpiumbangbang.com</a>
+			<a class="text-reset fw-bold" href="./portada.html" th:href="@{./portada.html}">paintballpiumpiumbangbang.com</a>
 		</div>
 
 	</footer>
