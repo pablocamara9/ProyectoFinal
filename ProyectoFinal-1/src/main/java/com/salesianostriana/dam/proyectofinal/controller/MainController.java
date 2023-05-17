@@ -21,4 +21,10 @@ public class MainController {
 		model.addAttribute("jugador", jugadorService.findAll());
 		return "portada";
 	}
+	
+	@GetMapping({"formularioRegistro.html", "registro"})
+	public String formularioRegistro(Model model) {
+		//model.addAttribute("jugador", jugadorService.findAll());
+		return "formularioRegistro";
+	}
 }

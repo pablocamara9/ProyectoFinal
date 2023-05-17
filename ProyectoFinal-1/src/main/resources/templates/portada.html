@@ -11,6 +11,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="./css/estilos.css" th:href="@{/css/estilos.css}">
 	<script src="./js/script.js" defer th:src="@{/js/script.js}"></script>
 	<title>Inicio</title>
@@ -35,6 +36,12 @@
 					<a class="nav-link" href="#section4">Nuestro material</a>
 				</li>
 			</ul>
+			<ul class="navbar-nav justify-content-end">
+				<li class="nav-item">
+					<a class="nav-link" href="./formularioRegistro.html" th:href="@{formularioRegistro.html}">Registrarse</a>		
+				</li>
+			</ul>
+			
 		</div>
 	</nav>
 
@@ -90,7 +97,7 @@
 		<div class="material">
 			<h1>Nuestro material</h1>
 			<br>
-			<div class="card" style="width:250px">
+			<div data-aos="fade-down-right" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/m4ai.jpg" alt="M4A1" th:href="@{/img/m4a1.jpg}">
 				<div class="card-body">
 					<hr>
@@ -98,7 +105,7 @@
 				</div>
 			</div>
 
-			<div class="card" style="width:250px">
+			<div data-aos="fade-down" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/ak47.jpg" alt="AK47" th:href="@{/img/ak47.jpg}">
 				<div class="card-body">
 					<hr>
@@ -106,7 +113,7 @@
 				</div>
 			</div>
 
-			<div class="card" style="width:250px">
+			<div data-aos="fade-down" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/g36c.jpg" alt="G36C" th:href="@{/img/g36c.jpg}">
 				<div class="card-body">
 					<hr>
@@ -114,7 +121,7 @@
 				</div>
 			</div>
 
-			<div class="card" style="width:250px">
+			<div data-aos="fade-down-left" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/mp5.jpg" alt="MP5" th:href="@{/img/mp5.jpg}">
 				<div class="card-body">
 					<hr>
@@ -122,15 +129,15 @@
 				</div>
 			</div>
 
-			<div class="card" style="width:250px">
+			<div data-aos="fade-right" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/scar.jpg" alt="SCAR-L" th:href="@{/img/scar.jpg}">
 				<div class="card-body">
-					<hr>
+          			<hr>
 					<h4 class="card-title">SCAR-L</h4>
 				</div>
 			</div>
 
-			<div class="card" style="width:250px">
+			<div data-aos="fade-down" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/ump45.jpg" alt="UMP45" th:href="@{/img/ump45.jpg}">
 				<div class="card-body">
 					<hr>
@@ -138,7 +145,7 @@
 				</div>
 			</div>
 
-			<div class="card" style="width:250px">
+			<div data-aos="fade-down" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/m14.jpg" alt="M14" th:href="@{/img/m14.jpg}">
 				<div class="card-body">
 					<hr>
@@ -146,7 +153,7 @@
 				</div>
 			</div>
 
-			<div class="card" style="width:250px">
+			<div data-aos="fade-down-left" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/p90.jpg" alt="P90" th:href="@{/img/p90.jpg}">
 				<div class="card-body">
 					<hr>
@@ -156,7 +163,7 @@
 
 			<span id="mas">
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-right" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/g3.jpg" alt="G3" th:href="@{/img/g3.jpg}">
 					<div class="card-body">
 						<hr>
@@ -164,7 +171,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-down" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/famas.jpg" alt="FAMAS" th:href="@{/img/famas.jpg}">
 					<div class="card-body">
 						<hr>
@@ -172,7 +179,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-down" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/sig552.jpg" alt="SIG 552" th:href="@{/img/sig552.jpg}">
 					<div class="card-body">
 						<hr>
@@ -180,7 +187,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-left" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/m16.jpg" alt="M16" th:href="@{/img/m16.jpg}">
 					<div class="card-body">
 						<hr>
@@ -188,7 +195,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-right" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/monoVerde.jpg" alt="Mono Verde" th:href="@{/img/monoVerde.jpg}">
 					<div class="card-body">
 						<hr>
@@ -196,7 +203,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-down" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/monoAzul.jpg" alt="Mono Azul" th:href="@{/img/monoAzul.jpg}">
 					<div class="card-body">
 						<hr>
@@ -204,7 +211,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-down" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/cascoVerde.jpg" alt="Casco Verde" th:href="@{/img/cascoVerde.jpg}">
 					<div class="card-body">
 						<hr>
@@ -212,7 +219,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-left" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/cascoNegro.jpg" alt="Casco Negro" th:href="@{/img/cascoNegro.jpg}">
 					<div class="card-body">
 						<hr>
@@ -220,7 +227,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-up-right" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/tuboBolas.jpg" alt="Tubo Bolas" th:href="@{/img/tuboBolas.jpg}">
 					<div class="card-body">
 						<hr>
@@ -228,7 +235,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-up" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/cajaBolasProfesionales.jpg" alt="Bolas Profesionales" th:href="@{/img/cajaBolasProfesionales.jpg}">
 					<div class="card-body">
 						<hr>
@@ -236,7 +243,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-up" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/cargadorAmpliado.jpg" alt="Cargador Ampliado" th:href="@{/img/cargadorAmpliado.jpg}">
 					<div class="card-body">
 						<hr>
@@ -244,7 +251,7 @@
 					</div>
 				</div>
 
-				<div class="card" style="width:250px">
+				<div data-aos="fade-up-left" class="card" style="width:250px">
 					<img class="card-img-top" src="./img/culata.jpg" alt="Culata" th:href="@{/img/culata.jpg}">
 					<div class="card-body">
 						<hr>
@@ -358,5 +365,9 @@
 
 
 </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </html>
