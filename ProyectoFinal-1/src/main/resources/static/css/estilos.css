@@ -92,3 +92,11 @@ h1, p{
     width: 200px;
     height: 200px;
 }
+
+.card-img-top {
+    transition: transform .2s;
+}
+  
+.card-img-top:hover {
+    transform: scale(0.9);
+}

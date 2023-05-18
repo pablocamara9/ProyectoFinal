@@ -8,7 +8,7 @@ function validarFormulario() {
     let mensajeError = document.getElementById("passwordError");
     
     if (password !== repeatPassword) {
-      mensajeError.style.display = "inline-block"
+      mensajeError.style.display = "inline-block";
       return event.preventDefault();
     }else{
         return document.getElementById("registerForm").action = "portada.html";
