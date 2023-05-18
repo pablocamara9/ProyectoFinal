@@ -14,9 +14,9 @@
 	<!--Import librería AOS-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!--Link CSS y JS-->
-    <link rel="stylesheet" href="./css/formularioRegistro.css" th:href="@{/css/formularioRegistro.css}">
-    <script src="./js/formularioRegistro.js" defer th:src="@{/js/formularioRegistro.js}"></script>
-    <title>Formulario registro</title>
+    <link rel="stylesheet" href="./css/formularioInicioSesion.css" th:href="@{/css/formularioInicioSesion.css}">
+    <script src="./js/formularioInicioSesion.js" defer th:src="@{/js/formularioInicioSesion.js}"></script>
+    <title>Formulario inicio sesión</title>
 </head>
 <body>
 
@@ -30,20 +30,20 @@
 					</a>
 				</li>
 			</ul>
-			<ul class="navbar-nav justify-content-end">
+            <ul class="navbar-nav justify-content-end">
 				<li class="nav-item">
-					<a class="nav-link" href="./formularioInicioSesion.html" th:href="@{formularioInicioSesion.html}">Iniciar sesión <i class="bi bi-box-arrow-in-right"></i></a>
+					<a class="nav-link" href="./formularioRegistro.html" th:href="@{formularioRegistro.html}">Registrarse <i class="bi bi-box-arrow-in-right"></i></a>
 				</li>
 			</ul>
 		</div>
 	</nav>
 
     <br><br><br><br><br>
-
+    <!----------------------------------------------------------------------------------------------------------------------------------->
     <div data-aos="fade-up" class="formulario">
-        <form action="#" class="formularioRegistro" id="registerForm">
+        <form action="./portada.html" class="formularioInicioSesion" id="loginForm">
             <div class="container">
-              <h1>Regístrate</h1>
+              <h1>Inicia sesión</h1>
               <p>Por favor, rellene los campos a continuación.</p>
               <hr>
           
@@ -52,25 +52,21 @@
           
               <label for="psw"><b>Contraseña</b></label>
               <input type="password" placeholder="Introduce tu contraseña" name="password" id="password" required>
-          
-              <label for="psw-repeat"><b>Repetir contraseña</b></label>
-              <input type="password" placeholder="Repite tu contraseña" name="repeatPassword" id="repeatPassword" required>
-			  <p id="passwordError">¡Las contraseñas no coinciden!</p>
+
 			  <hr>
           
-              <p>Creándote una cuenta, aceptas nuestros <a href="#">términos y política de privacidad</a>.</p>
-              <button type="submit" class="registerbtn">Regístrate</button>
+              <button type="submit" class="loginbtn">Iniciar sesión</button>
             </div>
           
             <div class="container signin">
-              <p>¿Ya tienes una cuenta? <a href="./formularioInicioSesion.html">Inicia sesión</a>.</p>
+              <p>¿No tienes una cuenta? <a href="./formularioRegistro.html">Regístrate</a>.</p>
             </div>
           </form>
 
     </div>
 
     <br><br><br>
-
+    <!----------------------------------------------------------------------------------------------------------------------------------->
     <footer class="text-center text-lg-start bg-dark text-muted">
 		<div>
 			<a href="" class="me-4 text-reset">

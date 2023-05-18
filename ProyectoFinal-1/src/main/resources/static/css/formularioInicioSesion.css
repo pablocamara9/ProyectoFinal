@@ -35,7 +35,7 @@ hr {
   margin-bottom: 25px;
 }
 
-.registerbtn {
+.loginbtn {
   background-color: #04AA6D;
   color: white;
   padding: 16px 20px;
@@ -46,7 +46,7 @@ hr {
   opacity: 0.9;
 }
 
-.registerbtn:hover {
+.loginbtn:hover {
   opacity:1;
 }
 
@@ -60,7 +60,7 @@ hr {
   border-radius: 20px;
 }
 
-.formularioRegistro{
+.formularioInicioSesion{
     align-items: center;
     padding-left: 70px;
     padding-right: 70px;
@@ -76,7 +76,7 @@ hr {
     padding-right: 70px;
 }
 
-h1, p, label, a, .registerbtn{
+h1, p, label, a, .loginbtn{
     font-family: Gunplay;
     color: rgb(255, 255, 255);
 }
