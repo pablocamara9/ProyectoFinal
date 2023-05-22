@@ -14,8 +14,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
-	<!--Import librería AOS-->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!--Import librerías AOS y Typed-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<!--Link CSS y JS-->
 	<link rel="stylesheet" href="./css/estilos.css" th:href="@{/css/estilos.css}">
 	<script src="./js/script.js" defer th:src="@{/js/script.js}"></script>
@@ -66,38 +67,27 @@
 
 	<div id="section2" class="container-fluid" style="padding:100px 20px;">
 		<div class="quienesSomos">
-			<h1>¿Quiénes somos?</h1>
+			<!--Uso la librería Typed para que los textos tengan la animación de que se escriben, ver script abajo del todo-->
+			<h1><span class="mov"></span></h1>
 			<p>
-				¡Bienvenidos a Paintball Pium Pium Bang Bang! Somos una empresa apasionada por brindar una experiencia
-				de paintball única y emocionante para nuestros clientes. Nos enorgullece ofrecer una amplia variedad de
-				juegos y escenarios para satisfacer las necesidades de todos los jugadores de paintball,
-				desde principiantes hasta expertos.
+				<span class="mov1"></span>
 			</p>
 			<p>
-				Nuestro equipo está formado por jugadores de paintball experimentados y apasionados que están dedicados
-				a garantizar que cada persona que visita nuestro campo tenga una experiencia segura, divertida y
-				memorable. Ya sea que esté organizando una fiesta de cumpleaños, una reunión de empresa o simplemente
-				quiera pasar un buen rato con amigos, estamos aquí para brindarle una experiencia de paintball
-				inolvidable.
+				<span class="mov2"></span>
 			</p>
 			<p>
-				Además, nos tomamos muy en serio la seguridad de nuestros clientes y la higiene del material,
-				el cual se desinfecta a primera hora de la mañana, a mitad del servicio y a última hora,
-				antes de cerrar. Contamos con personal capacitado en primeros auxilios y estamos comprometidos
-				con el mantenimiento constante de nuestro equipo y campos de juego para garantizar que todos los
-				jugadores estén seguros en todo momento.
+				<span class="mov3"></span>
 			</p>
 			<p>
-				En resumen, en Paintball Pium Pium Bang Bang somos un equipo apasionado de jugadores de paintball que
-				se dedica a brindar una experiencia emocionante y segura para todos los jugadores de paintball.
-				¡Esperamos verte pronto en nuestro campo!
+				<span class="mov4"></span>
 			</p>
 		</div>
 	</div>
 
   <div id="section3" class="container-fluid" style="padding:100px 20px;">
     <div class="dondeEstamos">
-      <h1>¿Dónde estamos?</h1>
+	<!--Uso la librería Typed para que los textos tengan la animación de que se escriben, ver script abajo del todo-->
+      <h1><span class="mov5"></span></h1>
       <br>
 	  <div class="mapa">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1507.4797328775742!2d-5.940813587006657!3d37.344815455547206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1684238526066!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -107,8 +97,9 @@
 
 	<div id="section4" class="container-fluid" style="padding:100px 20px;">
 		<div class="material">
-			<h1>Nuestro material</h1>
-			<h4 id="armas"><i class="bi bi-arrow-right-short"></i> Armas</h4><!--Añadir flechas apuntando a la derecha!!!!!-->
+		<!--Uso la librería Typed para que los textos tengan la animación de que se escriben, ver script abajo del todo-->
+			<h1><span class="mov6"></span></h1>
+			<h4 id="armas"><i class="bi bi-arrow-right-short"></i> Armas</h4>
 			<br>
 			<div data-aos="fade-down-right" class="card" style="width:250px">
 				<img class="card-img-top" src="./img/m4ai.jpg" alt="M4A1" th:href="@{/img/m4a1.jpg}">
@@ -387,11 +378,71 @@
 	</footer>
 
 
+
+
+
+
+
+
+
+
+
+
+	<!--Script librería Typed-->
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<script>
+		let typed = new Typed(".mov",{
+		strings: ["¿Quin", "Quien", "¿Quiénse", "¿Quiénes sim", "¿Quiénes sonm", "¿Quiénes somos?"] ,
+		typeSpeed: 130,
+		backSpeed: 30,
+		loop: false
+		})
+
+		let typed1 = new Typed(".mov1",{
+		strings: ["¡Bienvenidos a Paintball Pium Pium Bang Bang! Somos una empresa apasionada por brindar una experiencia de paintball única y emocionante para nuestros clientes. Nos enorgullece ofrecer una amplia variedad de juegos y escenarios para satisfacer las necesidades de todos los jugadores de paintball, desde principiantes hasta expertos."] ,
+		typeSpeed: 20,
+		loop: false
+		})
+
+		let Typed2 = new Typed(".mov2",{
+		strings: ["Nuestro equipo está formado por jugadores de paintball experimentados y apasionados que están dedicados a garantizar que cada persona que visita nuestro campo tenga una experiencia segura, divertida y memorable. Ya sea que esté organizando una fiesta de cumpleaños, una reunión de empresa o simplemente quiera pasar un buen rato con amigos, estamos aquí para brindarle una experiencia de paintball inolvidable."] ,
+		typeSpeed: 15,
+		loop: false
+		})
+
+		let Typed3 = new Typed(".mov3",{
+		strings: ["Además, nos tomamos muy en serio la seguridad de nuestros clientes y la higiene del material, el cual se desinfecta a primera hora de la mañana, a mitad del servicio y a última hora, antes de cerrar. Contamos con personal capacitado en primeros auxilios y estamos comprometidos con el mantenimiento constante de nuestro equipo y campos de juego para garantizar que todos los jugadores estén seguros en todo momento."] ,
+		typeSpeed: 15,
+		loop: false
+		})
+
+		let Typed4 = new Typed(".mov4",{
+		strings: ["En resumen, en Paintball Pium Pium Bang Bang somos un equipo apasionado de jugadores de paintball que se dedica a brindar una experiencia emocionante y segura para todos los jugadores de paintball. ¡Esperamos verte pronto en nuestro campo!"] ,
+		typeSpeed: 30,
+		loop: false
+		})
+
+		let Typed5 = new Typed(".mov5",{
+		strings: ["Dnd", "Dond", "¿Donde", "¿Dónde ets", "¿Dónde estamos?"] ,
+		typeSpeed: 130,
+		backSpeed: 30,
+		loop: false
+		})
+
+		let Typed6 = new Typed(".mov6",{
+		strings: ["nues", "Nuets", "Nuestro mtae", "Nuestro materiall", "Nuestro material"] ,
+		typeSpeed: 130,
+		backSpeed: 30,
+		loop: false
+		})
+	</script>
+
+	<!--Script librería AOS-->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	AOS.init();
+	</script>
+
 </body>
-<!--Script AOS-->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
 </html>

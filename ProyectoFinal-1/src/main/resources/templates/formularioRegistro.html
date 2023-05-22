@@ -13,8 +13,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
-	<!--Import librería AOS-->
+	<!--Import librerías AOS y Typed-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<!--Link CSS y JS-->
     <link rel="stylesheet" href="./css/formularioRegistro.css" th:href="@{/css/formularioRegistro.css}">
     <script src="./js/formularioRegistro.js" defer th:src="@{/js/formularioRegistro.js}"></script>
@@ -45,8 +46,9 @@
     <div data-aos="fade-up" class="formulario">
         <form action="#" class="formularioRegistro" id="registerForm">
             <div class="container">
-              <h1>Regístrate</h1>
-              <p>Por favor, rellene los campos a continuación.</p>
+			<!--Uso la librería Typed para que los textos tengan la animación de que se escriben, ver script abajo del todo-->
+              <h1><span class="mov"></span></h1>
+              <p><span class="mov2"></span></p>
               <hr>
           
               <label for="email"><b>Email</b></label>
@@ -167,12 +169,29 @@
 
 	</footer>
     
-    
-</body>
-<!--Script AOS-->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
+	<!--Script librería Typed-->
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<script>
+    	let typed = new Typed(".mov",{
+    	strings: ["reg", "Regis", "Regístrta", "Regístrate"] ,
+    	typeSpeed: 130,
+    	backSpeed: 30,
+    	loop: false
+    })
+
+	let typed2 = new Typed(".mov2",{
+    	strings: ["Por favor, rellene los campos a continuación."] ,
+    	typeSpeed: 100,
+    	loop: false
+    })
 </script>
+	
+	<!--Script AOS-->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+  	AOS.init();
+	</script>
+</body>
+
 
 </html>
