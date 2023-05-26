@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Import bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Import bootstrap icons-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!--Import bootstrap js-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<!--Import librerías AOS y Typed-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<!--Link CSS y JS-->
+    <link rel="stylesheet" href="../static/css/estilos.css" th:href="@{/css/estilos.css}">
+    <script src="../static/js/formularioRegistro.js" defer th:src="@{/js/formularioRegistro.js}"></script>
+    <title>Formulario registro</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+		<a href="./portada.html" th:href="@{./portada.html}"><img src="../static/img/LogoPaintballTerminado.png" alt="LogoPaintball" id="logo" th:href="@{/img/LogoPaintballTerminado.png}"></a>
+		<div class="container-fluid">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="./portada.html" th:href="@{./portada.html}">
+						<i class="bi bi-arrow-left-short"></i> Volver a inicio
+					</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav justify-content-end">
+				<li class="nav-item">
+					<a class="nav-link" href="./formularioInicioSesion.html" th:href="@{formularioInicioSesion.html}">Iniciar sesión <i class="bi bi-box-arrow-in-right"></i></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+    <br><br><br><br><br>
+
+    <div data-aos="fade-up" class="formulario">
+        <form action="#" class="formularioRegistro" id="registerForm">
+            <div class="container">
+			<!--Uso la librería Typed para que los textos tengan la animación de que se escriben, ver script abajo del todo-->
+              <h1><span class="mov"></span></h1>
+              <p><span class="mov2"></span></p>
+              <hr>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Introduce tu Email" name="email" id="email" required>
+          
+              <label for="psw"><b>Contraseña</b></label>
+              <input type="password" placeholder="Introduce tu contraseña" name="password" id="password" required>
+          
+              <label for="psw-repeat"><b>Repetir contraseña</b></label>
+              <input type="password" placeholder="Repite tu contraseña" name="repeatPassword" id="repeatPassword" required>
+			  <p id="passwordError">¡Las contraseñas no coinciden!</p>
+			  <hr>
+          
+              <p>Creándote una cuenta, aceptas nuestros <a href="#">términos y política de privacidad</a>.</p>
+              <button type="submit" class="registerbtn">Regístrate</button>
+            </div>
+          
+            <div class="container signin">
+              <p>¿Ya tienes una cuenta? <a href="./formularioInicioSesion.html">Inicia sesión</a>.</p>
+            </div>
+          </form>
+
+    </div>
+
+    <br><br><br>
+
+    <footer class="text-center text-lg-start bg-dark text-muted">
+		<div>
+			<a href="" class="me-4 text-reset">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="" class="me-4 text-reset">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a href="" class="me-4 text-reset">
+				<i class="fab fa-google"></i>
+			</a>
+			<a href="" class="me-4 text-reset">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="" class="me-4 text-reset">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			<a href="" class="me-4 text-reset">
+				<i class="fab fa-github"></i>
+			</a>
+		</div>
+
+		<section class="">
+			<div class="container text-center text-md-start mt-5">
+				<div class="row mt-3">
+					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+						<h6 class="text-uppercase fw-bold mb-4">
+							<i class="fas fa-gem me-3"></i>Paintball Pium Pium Bang Bang
+						</h6>
+						<a href="./portada.html" th:href="@{./portada.html}">
+							<img src="../static/img/LogoPaintballTerminado.png" alt="Logo" id="logoFooter"th:href="@{/img/LogoPaintballTerminado.jpg}">
+						</a>
+					</div>
+
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+						<h6 class="text-uppercase fw-bold mb-4">
+							Nuestras redes
+						</h6>
+						<p>
+							<a href="#!" class="text-reset"><i class="bi bi-twitter"></i> Twitter</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset"><i class="bi bi-instagram"></i> Instagram</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset"><i class="bi bi-facebook"></i> Facebook</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset"><i class="bi bi-youtube"></i> Youtube</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset"><i class="bi bi-telegram"></i> Telegram</a>
+						</p>
+					</div>
+
+					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+						<h6>Novedades próximas</h6>
+						<p>Recibe alertas con novedades futuras</p>
+						<form>
+							<div class="d-flex flex-column flex-sm-row w-100 gap-2">
+								<label for="newsletter1" class="visually-hidden">Email address</label>
+								<input id="newsletter1" type="text" class="form-control" placeholder="Email">
+								<button class="btn btn-primary" type="button">Enviar</button>
+							</div>
+						</form>
+
+					</div>
+
+					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+						<h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+						<p><i class="fas fa-home me-3"></i> 41089 - Montequinto, Sevilla</p>
+						<p>
+							<i class="fas fa-envelope me-3"></i>
+							info@paintballpiumpiumbangbang.com
+						</p>
+						<p><i class="fas fa-phone me-3"></i> +34 660 229 922</p>
+						<p><i class="fas fa-print me-3"></i> +34 954 119 160</p>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+			© 2023 Copyright:
+			<a class="text-reset fw-bold" href="./portada.html" th:href="@{./portada.html}">paintballpiumpiumbangbang.com</a>
+		</div>
+
+	</footer>
+
+	<!--Script librerías externas-->
+    
+	<!--Script librería Typed-->
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<script>
+    	let typed = new Typed(".mov",{
+    	strings: ["reg", "Regis", "Regístrta", "Regístrate"] ,
+    	typeSpeed: 130,
+    	backSpeed: 30,
+    	loop: false
+    })
+
+	let typed2 = new Typed(".mov2",{
+    	strings: ["Por favor, rellene los campos a continuación."] ,
+    	typeSpeed: 100,
+    	loop: false
+    })
+</script>
+	
+	<!--Script AOS-->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+  	AOS.init();
+	</script>
+</body>
+
+
+</html>
